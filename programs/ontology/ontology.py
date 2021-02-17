@@ -27,7 +27,7 @@ from pretty import PrettyPrint
 ### Ontology import helper functions.
 def load_yaml(file_path):
 	""" Load a yaml file. Handles doc separation by loading all and combining into common dict. """
-	docs = yaml.load_all(open(file_path,'r',encoding='utf-8'),Loader=yaml.FullLoader)
+	docs = yaml.load_all(open(file_path,'r',encoding='utf-8'),Loader=yaml.SafeLoader)
 
 	data = {}
 	for doc in docs:
